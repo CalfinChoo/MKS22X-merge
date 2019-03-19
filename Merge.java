@@ -14,9 +14,9 @@ public class Merge {
     if (hi > lo) {  // runs when not base case
       int[] left = subarray(data, lo, (hi + lo) / 2 + 1);  // stores left subarray of a side
       int[] right = subarray(data, (hi + lo) / 2 + 1, hi + 1);  // store right subarray of a side
-      if (left.length < 5000) insertionSort(left, 0, left.length - 1);
+      if (left.length < 3500) insertionSort(left, 0, left.length - 1);
       else msH(left, 0, left.length - 1); // recursively calls method on left side then the right side
-      if (right.length < 5000) insertionSort(right, 0, right.length - 1);
+      if (right.length < 3500) insertionSort(right, 0, right.length - 1);
       else msH(right, 0, right.length - 1);
       // merges the left and right side back together in order
       int l = 0, r = 0;  // ints to keep track of indices of left and right arrays
