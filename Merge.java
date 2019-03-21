@@ -1,11 +1,11 @@
 public class Merge {
-  public static void main(String[] args) {
-    int[] testAry = {9, 6, 2, 5, 1, 0, 6, 7, 7 , 9, 15, 16, 34, 76, 98, 109, 607, 45, 21, 32};
-    mergesort(testAry);
-    for (int i = 0; i < testAry.length; i++) {
-      System.out.print(testAry[i] + " ");
-    }
-  }
+  // public static void main(String[] args) {
+  //   int[] testAry = {9, 6, 2, 5, 1, 0, 6, 7, 7 , 9, 15, 16, 34, 76, 98, 109, 607, 45, 21, 32};
+  //   mergesort(testAry);
+  //   for (int i = 0; i < testAry.length; i++) {
+  //     System.out.print(testAry[i] + " ");
+  //   }
+  // }
   /*sort the array from least to greatest value. This is a wrapper function*/
   public static void mergesort(int[] data){
     msH(data, 0, data.length - 1);
@@ -14,9 +14,9 @@ public class Merge {
     if (hi > lo) {  // runs when not base case
       int[] left = subarray(data, lo, (hi + lo) / 2 + 1);  // stores left subarray of a side
       int[] right = subarray(data, (hi + lo) / 2 + 1, hi + 1);  // store right subarray of a side
-      if (left.length < 3500) insertionSort(left, 0, left.length - 1);
+      if (left.length < 43) insertionSort(left, 0, left.length - 1);
       else msH(left, 0, left.length - 1); // recursively calls method on left side then the right side
-      if (right.length < 3500) insertionSort(right, 0, right.length - 1);
+      if (right.length < 43) insertionSort(right, 0, right.length - 1);
       else msH(right, 0, right.length - 1);
       // merges the left and right side back together in order
       int l = 0, r = 0;  // ints to keep track of indices of left and right arrays
